@@ -1,8 +1,10 @@
+""" Module for calculating expected return estimates """
+import pandas as pd
 
 
-def mean_return():
+def mean_return(returns: pd.DataFrame) -> pd.Series | float:
     # todo
-    return
+    return returns.mean()
 
 
 def exponential_weighted_return():

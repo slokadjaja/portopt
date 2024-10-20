@@ -13,3 +13,13 @@ def drawdown(prices: pd.DataFrame):
 def sharpe(returns: pd.DataFrame):
     # todo
     return
+
+
+def kurtosis(returns: pd.DataFrame):
+    kurtosis = ((returns - returns.mean()) ** 4).mean() / (returns.std(ddof=0) ** 4)
+    return kurtosis
+
+
+def skewness(returns: pd.DataFrame):
+    skew = ((returns - returns.mean()) ** 3).mean() / (returns.std(ddof=0) ** 3)
+    return skew
